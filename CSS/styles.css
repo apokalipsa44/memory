@@ -4,6 +4,21 @@
     box-sizing: border-box;
 }
 
+.main-title{
+    margin: auto;
+    text-align: center;
+}
+
+.game-scores{
+    margin: 5% auto;
+}
+
+
+.game-field {
+    max-width: 800px;
+    perspective: 600px;
+    transform-style: preserve-3d;
+}
 
 .card {
     max-width: 180px;
@@ -14,21 +29,26 @@
     position: relative;
     overflow: hidden;
     padding: 0;
+    transition: transform .5s;
 }
 
-.game-field {
-    max-width: 800px;
-}
 
-.card-front-side .card-reverse {
+.card-front-side  {
     width: 100%;
     position: absolute;
-    backface-visibility: hidden;
+    transform: rotateY(-180deg);
 }
 
-.card-reverse {
+.card-reverse{
     width: 100%;
     position: absolute;
-    backface-visibility: hidden;
-
 }
+
+
+.card.flip {
+    transform: rotateY(180deg);
+  }
+
+  .invisible{
+     background-color : rgba(8, 8, 8, 0.383);
+  }
