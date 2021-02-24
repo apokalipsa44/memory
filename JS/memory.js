@@ -25,7 +25,6 @@ resetButton.addEventListener("click", () => {
 });
 
 function startRound(card) {
-  console.log(blockMoves);
   if (blockMoves) return;
   initCounter();
   card.classList.add("flip");
@@ -81,21 +80,20 @@ function checkCards(firstCard, secondCard) {
       disableCards(firstCard, secondCard);
     }, 1000);
   }
-  if (!isCardMatching) unstartRounds(firstCard, secondCard);
+  if (!isCardMatching) unFlip(firstCard, secondCard);
   isCardMatching = false;
   blockMoves = checkForFailure();
   checkForWining();
 }
 
 function disableCards(firstCard, secondCard) {
-  console.log("invisible");
   blockMoves = false;
 
   firstCard.classList.add("invisible");
   secondCard.classList.add("invisible");
 }
 
-function unstartRounds(firstCard, secondCard) {
+function unFlip(firstCard, secondCard) {
   setTimeout(() => {
     firstCard.classList.remove("flip");
     secondCard.classList.remove("flip");
@@ -106,6 +104,7 @@ function unstartRounds(firstCard, secondCard) {
 function updateDisplayScore() {
   document.getElementById("score").innerHTML = score;
 }
+
 function updateTraysScore() {
   document.getElementById("moves").innerHTML = moves;
 }
@@ -127,7 +126,7 @@ function clearRevealedCards() {
 
 function checkForFailure() {
   if (moves > 15) {
-    userMessage.innerHTML = "So sad...You lost!";
+    userMessage.innerHTML = "So sad... You lost!";
     return true;
   }
   return false;
