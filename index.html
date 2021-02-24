@@ -1,14 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./CSS/styles.css" />
     <title>Muppet's Memory Game</title>
-</head>
-<body>
-    <h1>Muppet's Memory Game</h1>
-    <h4>Score: </h4>
-</body>
+  </head>
+  <body>
+    <header class="container">
+      <h1 class="main-title">Muppet's Memory Game</h1>
+    </header>
+
+    <div class="game-scores container">
+      <div class="row">
+        <div class="col-6">
+          <h4>Score:</h4>
+        </div>
+        <div class="col-6">
+          <h4>Time:</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <h4>Trays:</h4>
+        </div>
+        <div class="col-6">
+          <h4>Best time</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 reset-button"><button>reset game</button></div>
+      </div>
+    </div>
+    <div class="container game-field">
+      <div class="row ">
+        <div class="card col-6 col-sm-4 col-md-3">
+          <img
+            class="card-front-side"
+            src="./images/muppets/Kermit-the-frog.jpg"
+          />
+          <img class="card-reverse" src="./images/card-back.jpg" />
+        </div>
+        <div class="card col-6 col-sm-4 col-md-3">
+          <img
+            class="card-front-side"
+            src="./images/muppets/Kermit-the-frog.jpg"
+          />
+          <img class="card-reverse" src="./images/card-back.jpg" />
+        </div>
+        <div class="card col-6 col-sm-4 col-md-3">
+          <img
+            class="card-front-side"
+            src="./images/muppets/Kermitbanjorainbow.jpg"
+          />
+          <img class="card-reverse" src="./images/card-back.jpg" />
+        </div>
+        <div class="card col-6 col-sm-4 col-md-3">
+          <img
+            class="card-front-side"
+            src="./images/muppets/Kermitbanjorainbow.jpg"
+          />
+          <img class="card-reverse" src="./images/card-back.jpg" />
+        </div>
+        <div class="card col-6 col-sm-4 col-md-3">
+          <img
+            class="card-front-side"
+            src="./images/muppets/Mayhem.band.poster.jpg"
+          />
+          <img class="card-reverse" src="./images/card-back.jpg" />
+        </div>
+        <div class="card col-6 col-sm-4 col-md-3">
+          <img
+            class="card-front-side"
+            src="./images/muppets/Mayhem.band.poster.jpg"
+          />
+          <img class="card-reverse" src="./images/card-back.jpg" />
+        </div>
+        <div class="card col-6 col-sm-4 col-md-3">
+          <img class="card-front-side" src="./images/muppets/Piggy-Hat.jpg" />
+          <img class="card-reverse" src="./images/card-back.jpg" />
+        </div>
+        <div class="card col-6 col-sm-4 col-md-3">
+          <img class="card-front-side" src="./images/muppets/Piggy-Hat.jpg" />
+          <img class="card-reverse" src="./images/card-back.jpg" />
+        </div>
+        <div class="card col-6 col-sm-4 col-md-3">
+          <img
+            class="card-front-side"
+            src="./images/muppets/Poster-Electric-Mayhem.jpg"
+          />
+          <img class="card-reverse" src="./images/card-back.jpg" />
+        </div>
+        <div class="card col-6 col-sm-4 col-md-3">
+          <img
+            class="card-front-side"
+            src="./images/muppets/Poster-Electric-Mayhem.jpg"
+          />
+          <img class="card-reverse" src="./images/card-back.jpg" />
+        </div>
+        <div class="card col-6 col-sm-4 col-md-3">
+          <img
+            class="card-front-side"
+            src="./images/muppets/Whatever.JPG.jpg"
+          />
+          <img class="card-reverse" src="./images/card-back.jpg" />
+        </div>
+        <div class="card col-6 col-sm-4 col-md-3">
+          <img
+            class="card-front-side"
+            src="./images/muppets/Whatever.JPG.jpg"
+          />
+          <img class="card-reverse" src="./images/card-back.jpg" />
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
