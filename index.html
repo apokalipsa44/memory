@@ -13,83 +13,89 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="./JS/memory.js" defer></script>
     <link rel="stylesheet" href="./CSS/styles.css" />
+
     <title>Muppet's Memory Game</title>
   </head>
-    <body>
+  <body>
     <header class="container">
       <h1 class="main-title">Muppet's Memory Game</h1>
     </header>
 
-    <div class="game-scores container">
-      <div class="row">
-        <div class="col-6">
-          <h4>Score:</h4>
+    <div class="game-scores">
+      <div class="d-flex justify-content-between">
+        <div class="score">
+          <p4>Score: <span id="score"></span></p4>
         </div>
-        <div class="col-6">
-          <h4>Time: <span id="minutes"></span>:<span id="seconds"></span></h4>
+        <div class="score">
+          <p4>Trays: <span id="moves"></span></p4>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-6">
-          <h4>Trays:</h4>
+        <div class="score">
+          <p4>Time: <span id="minutes"></span>:<span id="seconds"></span></p4>
         </div>
-        <div class="col-6">
-          <h4>Best time</h4>
+        <div class="score" id="reset-button">
+          <button class="btn btn-success">reset game</button>
         </div>
       </div>
       <div class="row">
-        <div class="col-12 reset-button"><button>reset game</button></div>
+        <div class="col-12">
+          <div class="found-pictures" id="found"></div>
+        </div>
       </div>
     </div>
+
+    <h3 class="user-message"><span id="user-message"></span></h3>
+
     <div class="container game-field">
-      <div class="row ">
-        <div class="card col-6 col-sm-4 col-md-3 " data-muppet="kermit">
+      <div class="row">
+        <div class="card col-6 col-sm-4 col-md-3" data-muppet="kermit">
           <img
             class="card-front-side"
             src="./images/muppets/Kermit-the-frog.jpg"
           />
           <img class="card-reverse" src="./images/card-back.jpg" />
         </div>
-        <div class="card col-6 col-sm-4 col-md-3 " data-muppet="kermit">
+        <div class="card col-6 col-sm-4 col-md-3" data-muppet="kermit">
           <img
             class="card-front-side"
             src="./images/muppets/Kermit-the-frog.jpg"
           />
           <img class="card-reverse" src="./images/card-back.jpg" />
         </div>
-        <div class="card col-6 col-sm-4 col-md-3 ">
+        <div class="card col-6 col-sm-4 col-md-3">
           <img
-            class="card-front-side" data-muppet="kermitBanjo"
+            class="card-front-side"
+            data-muppet="kermitBanjo"
             src="./images/muppets/Kermitbanjorainbow.jpg"
           />
           <img class="card-reverse" src="./images/card-back.jpg" />
         </div>
-        <div class="card col-6 col-sm-4 col-md-3 ">
+        <div class="card col-6 col-sm-4 col-md-3">
           <img
-            class="card-front-side" data-muppet="kermitBanjo"
+            class="card-front-side"
+            data-muppet="kermitBanjo"
             src="./images/muppets/Kermitbanjorainbow.jpg"
           />
           <img class="card-reverse" src="./images/card-back.jpg" />
         </div>
-        <div class="card col-6 col-sm-4 col-md-3 " data-muppet="band">
+        <div class="card col-6 col-sm-4 col-md-3" data-muppet="band">
           <img
             class="card-front-side"
             src="./images/muppets/Mayhem.band.poster.jpg"
           />
           <img class="card-reverse" src="./images/card-back.jpg" />
         </div>
-        <div class="card col-6 col-sm-4 col-md-3 " data-muppet="band">
+        <div class="card col-6 col-sm-4 col-md-3" data-muppet="band">
           <img
             class="card-front-side"
             src="./images/muppets/Mayhem.band.poster.jpg"
           />
           <img class="card-reverse" src="./images/card-back.jpg" />
         </div>
-        <div class="card col-6 col-sm-4 col-md-3 " data-muppet="piggy">
+        <div class="card col-6 col-sm-4 col-md-3" data-muppet="piggy">
           <img class="card-front-side" src="./images/muppets/Piggy-Hat.jpg" />
           <img class="card-reverse" src="./images/card-back.jpg" />
         </div>
-        <div class="card col-6 col-sm-4 col-md-3 " data-muppet="piggy">
+        <div class="card col-6 col-sm-4 col-md-3" data-muppet="piggy">
           <img class="card-front-side" src="./images/muppets/Piggy-Hat.jpg" />
           <img class="card-reverse" src="./images/card-back.jpg" />
         </div>
@@ -102,14 +108,14 @@
         </div>
         <div class="card col-6 col-sm-4 col-md-3" data-muppet="poster">
           <img
-            class="card-front-side" 
+            class="card-front-side"
             src="./images/muppets/Poster-Electric-Mayhem.jpg"
           />
           <img class="card-reverse" src="./images/card-back.jpg" />
         </div>
         <div class="card col-6 col-sm-4 col-md-3" data-muppet="jail">
           <img
-            class="card-front-side" 
+            class="card-front-side"
             src="./images/muppets/Whatever.JPG.jpg"
           />
           <img class="card-reverse" src="./images/card-back.jpg" />

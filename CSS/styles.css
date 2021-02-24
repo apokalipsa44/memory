@@ -1,16 +1,50 @@
+@font-face {
+    font-family: "Muppet Font";
+    src: url("/fonts/The\ Muppet\ Font.otf") format("opentype");
+}
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-.main-title{
-    margin: auto;
-    text-align: center;
+body {
+    background: radial-gradient(#e6d7c5, #e7b980);
 }
 
-.game-scores{
-    margin: 5% auto;
+.main-title {
+    margin: auto;
+    text-align: center;
+    font-family: 'Muppet Font', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(102, 54, 20);
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, .3);
+
+}
+
+.user-message {
+    text-align: center;
+    margin: auto;
+    color: #241806bd;
+    font-size: 64px;
+    font-weight: 800;
+    position: fixed;
+    top: 50%;
+    left: 30%;
+    z-index: 1500;
+}
+
+.game-scores {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 12px auto;
+    width: 80%;
+    font-weight: 600;
+    color: #333333d5;
+}
+
+.score {
+    margin: 0 5px;
 }
 
 
@@ -30,16 +64,28 @@
     overflow: hidden;
     padding: 0;
     transition: transform .5s;
+    border-radius: 8px;
+    transform: scale(1);
+
 }
 
 
-.card-front-side  {
+
+.card:hover {
+    transform: scale(0.97);
+    transition: transform .2s;
+}
+
+
+
+
+.card-front-side {
     width: 100%;
     position: absolute;
     transform: rotateY(-180deg);
 }
 
-.card-reverse{
+.card-reverse {
     width: 100%;
     position: absolute;
 }
@@ -47,8 +93,18 @@
 
 .card.flip {
     transform: rotateY(180deg);
-  }
+}
 
-  .invisible{
-     background-color : rgba(8, 8, 8, 0.383);
-  }
+
+.found-pictures {
+    display: flex;
+    min-height: 130px;
+}
+
+.revealed-image {
+    width: 90px;
+    margin: 0 5px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+
+}
